@@ -29,6 +29,9 @@ Object.defineProperty(Counter.prototype, 'value', {
 		return this.realValue || 0;
 	},
 	set : function(newValue) {
+		if (this.realValue != newValue) {
+			this.emit('changed', newValue, this.realValue);
+		}
 		this.realValue = newValue;
 
 		if (this.ready && this.realValue === this.options.target) {

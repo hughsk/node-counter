@@ -70,4 +70,15 @@ suite('Counter', function() {
 			count.value = 1;
 		});
 	});
+	test('event: changed', function(done) {
+		var count = counter(10, { target: 0 }),
+			changes = 0;
+
+		count.on('changed', function() {
+			changes += 1;
+		}).on('target', function() {
+			assert.equal(changes, this.options.target);
+			done();
+		}).start();
+	});
 });
