@@ -1,0 +1,23 @@
+{
+  "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughskennedy.com)",
+  "name": "counter",
+  "description": "A counter for use with asynchronous operations in Node.",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hughsk/node-counter.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/_mocha -u tdd --reporter spec"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "0.14.x"
+  },
+  "optionalDependencies": {},
+  "homepage": "http://github.com/hughsk/node-counter"
+}
